@@ -1,23 +1,17 @@
 package com.n11.usermanager.domain;
 
-import org.codehaus.jackson.map.annotate.JsonView;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.n11.usermanager.validation.View;
 
 @Document
 public class User {
 	@Id
-	@JsonView(View.Summary.class)
 	private String id;
 
-	@JsonView(View.Summary.class)
 	private String name;
-	@JsonView(View.Summary.class)
 	private String surname;
-	@JsonView(View.Summary.class)
 	private String phone;
 
 	public User() {	}
