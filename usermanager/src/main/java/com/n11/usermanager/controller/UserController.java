@@ -28,7 +28,7 @@ public class UserController {
         return "AddUser";
     }
 
-    @RequestMapping(value="/update/{id}",method=RequestMethod.GET)
+    @RequestMapping(value="user/update/{id}.htm",method=RequestMethod.GET)
     public String showFormForUpdate(ModelMap model, @PathVariable(value="id") String id){
     	User user = userRepository.findOne(id);
     	model.addAttribute("user", user);

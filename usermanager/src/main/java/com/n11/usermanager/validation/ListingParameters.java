@@ -30,5 +30,19 @@ public class ListingParameters {
 	public void setAsc(Boolean asc) {
 		this.asc = asc;
 	}
+	public ListingParameters(){}
+	public ListingParameters(Integer page, Integer max, String sorter,
+			Boolean asc) {
+		super();
+		this.page = page;
+		this.max = max;
+		this.sorter = sorter;
+		this.asc = asc;
+	}
+	@Override
+	public String toString() {
+		return "ListingParameters [page=" + page + ", max=" + max + ", sorter="
+				+ sorter + ", asc=" + asc + "]";
+	}
 
 }

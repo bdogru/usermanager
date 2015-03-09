@@ -17,6 +17,7 @@ public class UserMarshaller {
 		result.put("name", user.getName());
 		result.put("surname", user.getSurname());
 		result.put("phone", user.getPhone());
+    	System.out.println("user is marshalled: "+result.toJSONString());
 		return result;
 	}
 	
